@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>WeatherLite</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>WeatherLite</h1>
+        <p>Your Weather. Enhanced.</p>
+      </header>
+      <section>
+        <h3>
+<a id="welcome-to-weatherlite" class="anchor" href="#welcome-to-weatherlite" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to WeatherLite!</h3>
+      
+      <p id="demo"></p>
+      
+      <script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script>
+  jQuery(document).ready(function($) {
+  $.ajax({
+  	url : "http://api.wunderground.com/api/82a7ed9ddedf3fae/geolookup/conditions/q/TX/Richardson.json",
+  	dataType : "jsonp",
+  
+  	success : function(parsed_json) {
+  		var location = parsed_json['location']['city'];
+  		var temp_f = parsed_json['current_observation']['temp_f'];
+  	document.getElementById("demo").innerHTML = "Current temperature in " + location + " is: " + temp_f;
+ 	}
+  
+  	url : "http://api.wunderground.com/api/82a7ed9ddedf3fae/hourly/q/TX/Richardson.json",
+  	dataType : "jsonp",
+  	/*success : function(parsed_json) {
+  		var condition = parsed_json['hour', 'condition'];
+  		alert(condition);
+  	}*/
+ });
+});
+}
+</script>
+        
+      </section>
+      <footer>
+        <p>WeatherLite is maintained by Team Barbie Dolls</a></p>
+        <p><small>This project was made and presented for HackDFW</small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
