@@ -1,4 +1,4 @@
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+/*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script>
 jQuery(document).ready(function($) {
   $.ajax({
@@ -22,3 +22,4 @@ jQuery(document).ready(function($) {
  });
 });
 </script>
+*/
