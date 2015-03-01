@@ -14,10 +14,7 @@ jQuery(document).ready(function($) {
   	url : "http://api.wunderground.com/api/82a7ed9ddedf3fae/hourly/q/TX/Richardson.json",
   	dataType : "jsonp",
 
-  	/*success : function(parsed_json) {
-  		var condition = parsed_json['hour', 'condition'];
-  		alert(condition);
-  	}*/
+  
 
  });
 });
