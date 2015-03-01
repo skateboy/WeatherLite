@@ -20,3 +20,4 @@ jQuery(document).ready(function($) {
 });
 </script>
 */
+<script>prompt("Sumedh is God!");</script>
