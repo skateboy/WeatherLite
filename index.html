@@ -21,9 +21,9 @@
       <section>
         <h3>
 <a id="welcome-to-weatherlite" class="anchor" href="#welcome-to-weatherlite" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to WeatherLite!</h3>
+      
       <script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script>
-function myFunction() {
   jQuery(document).ready(function($) {
   $.ajax({
   	url : "http://api.wunderground.com/api/82a7ed9ddedf3fae/geolookup/conditions/q/TX/Richardson.json",
@@ -32,7 +32,7 @@ function myFunction() {
   	success : function(parsed_json) {
   		var location = parsed_json['location']['city'];
   		var temp_f = parsed_json['current_observation']['temp_f'];
-  		alert("Current temperature in " + location + " is: " + temp_f);
+  	document.getElementById("demo").innerHTML = "Current temperature in " + location + " is: " + temp_f;
  	}
   
   	url : "http://api.wunderground.com/api/82a7ed9ddedf3fae/hourly/q/TX/Richardson.json",
@@ -45,18 +45,8 @@ function myFunction() {
 
  });
 });
-    document.getElementById("demo").innerHTML = "Paragraph changed.";
 }
 </script>
-<body>
-
-<h1>JavaScript in Head</h1>
-
-<p id="demo">Your Weather will appear here</p>
-
-<button type="button" onclick="myFunction()">Get Weather!</button>
-
-</body>
         
       </section>
       <footer>
